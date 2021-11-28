@@ -11,22 +11,21 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <View
+      <Text
         style={{
-          backgroundColor: "dodgerblue",
-          width: 100,
-          height: 100,
+          fontSize: 30,
+          fontFamily: "Roboto",
+          fontStyle: "italic",
+          fontWeight: "bold",
+          color: "tomato",
+          textTransform: "lowercase",
+          textDecorationLine: "line-through",
+          textAlign: "center",
+          lineHeight: 35,
         }}
-      ></View>
-
-      <View
-        style={{
-          backgroundColor: "gold",
-          width: 100,
-          height: 100,
-          margin: 20,
-        }}
-      ></View>
+      >
+        i love REACT NATIVE app!!!! this is my first react native app......
+      </Text>
     </View>
   );
 }
