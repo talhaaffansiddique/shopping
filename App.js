@@ -16,9 +16,10 @@ export default function App() {
           backgroundColor: "dodgerblue",
           width: 100,
           height: 100,
-          borderWidth: 10,
-          borderColor: "royalblue",
-          borderRadius: 50,
+          shadowColor: "grey",
+          shadowOffset: { height: 20, width: 20 },
+          shadowOpacity: 1,
+          elevation: 30,
         }}
       />
     </View>
