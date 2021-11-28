@@ -1,9 +1,7 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { View } from "react-native";
 
-import AppText from "./app/components/AppText";
+import AppButton from "./app/components/AppButton";
 
 export default function App() {
   return (
@@ -14,8 +12,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <MaterialCommunityIcons name="email" size={60} color="blue" />
-      <AppText> REACT NATIVE app!!!!123</AppText>
+      <AppButton title="login" onPress={() => console.log("tabbed")} />
     </View>
   );
 }
