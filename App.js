@@ -15,7 +15,7 @@ export default function App() {
       }}
     >
       <MaterialCommunityIcons name="email" size={60} color="blue" />
-      <AppText>i love REACT NATIVE app!!!!</AppText>
+      <AppText> REACT NATIVE app!!!!123</AppText>
     </View>
   );
 }

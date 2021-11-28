@@ -8,7 +8,7 @@ function AppText({ children }) {
 const styles = StyleSheet.create({
   text: {
     color: "tomato",
-    fontSize: 10,
+    fontSize: 25,
     fontFamily: "Roboto",
   },
 });
