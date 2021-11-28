@@ -2,6 +2,8 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import AppText from "./app/components/AppText";
+
 export default function App() {
   return (
     <View
@@ -11,21 +13,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <Text
-        style={{
-          fontSize: 30,
-          fontFamily: "Roboto",
-          fontStyle: "italic",
-          fontWeight: "bold",
-          color: "tomato",
-          textTransform: "lowercase",
-          textDecorationLine: "line-through",
-          textAlign: "center",
-          lineHeight: 35,
-        }}
-      >
-        i love REACT NATIVE app!!!! this is my first react native app......
-      </Text>
+      <AppText>i love REACT NATIVE app!!!!</AppText>
     </View>
   );
 }
