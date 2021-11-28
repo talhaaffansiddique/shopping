@@ -16,12 +16,17 @@ export default function App() {
           backgroundColor: "dodgerblue",
           width: 100,
           height: 100,
-          shadowColor: "grey",
-          shadowOffset: { height: 20, width: 20 },
-          shadowOpacity: 1,
-          elevation: 30,
         }}
-      />
+      ></View>
+
+      <View
+        style={{
+          backgroundColor: "gold",
+          width: 100,
+          height: 100,
+          margin: 20,
+        }}
+      ></View>
     </View>
   );
 }
