@@ -5,7 +5,8 @@ import AppButton from "./app/components/AppButton";
 import WelcomeScreen from "./screens/WelcomeScreen";
 import Card from "./app/components/Card";
 import ListingDetailsScreen from "./screens/ListingDetailsScreen";
+import ViewImageScreen from "./screens/ViewImageScreen";
 
 export default function App() {
-  return <ListingDetailsScreen />;
+  return <ViewImageScreen />;
 }
