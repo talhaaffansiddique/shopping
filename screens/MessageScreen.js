@@ -1,8 +1,8 @@
 import React from "react";
-import { FlatList, StyleSheet } from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, View } from "react-native";
 
 import ListItem from "../app/components/ListItem";
-import Screen from "../app/components/Screen";
+// import Screen from "../app/components/Screen";
 
 const messages = [
   {
@@ -22,7 +22,7 @@ const messages = [
 
 function MessageScreen(props) {
   return (
-    <Screen>
+    <SafeAreaView>
       <FlatList
         data={messages}
         keyExtractor={(message) => message.id.toString()}
@@ -33,9 +33,14 @@ function MessageScreen(props) {
             image={item.image}
           />
         )}
+        ItemSeparatorComponent={() => (
+          <View
+            style={{ width: "100% ", height: 1, backgroundColor: "black" }}
+          />
+        )}
       />
-    </Screen>
+    </SafeAreaView>
   );
 }
-const styles = StyleSheet.create({});
+
 export default MessageScreen;
