@@ -24,6 +24,8 @@ const initialMessages = [
 
 function MessageScreen(props) {
   const [messages, setMessages] = useState(initialMessages);
+  const [refreshing, setRefreshing] = useState(false);
+
   // const count = array[0];
   // const setCount = array[1]; //setState
 
@@ -51,6 +53,17 @@ function MessageScreen(props) {
           />
         )}
         ItemSeparatorComponent={ListItemSeperator}
+        refreshing={refreshing}
+        onRefresh={() => {
+          setMessages([
+            {
+              id: 2,
+              title: "T2",
+              description: "D3",
+              image: require("../assets/mosh.jpg"),
+            },
+          ]);
+        }}
       />
     </Screen>
   );
