@@ -11,7 +11,8 @@ import ViewImageScreen from "./screens/ViewImageScreen";
 import MessageScreen from "./screens/MessageScreen";
 import ListItem from "./app/components/ListItem";
 import AccountScreen from "./screens/AccountScreen";
+import ListingScreen from "./screens/ListingScreen";
 
 export default function App() {
-  return <AccountScreen />;
+  return <ListingScreen />;
 }
