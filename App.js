@@ -9,11 +9,16 @@ import Card from "./app/components/Card";
 import ListingDetailsScreen from "./screens/ListingDetailsScreen";
 import ViewImageScreen from "./screens/ViewImageScreen";
 import MessageScreen from "./screens/MessageScreen";
+import ListItem from "./app/components/ListItem";
 
 export default function App() {
   return (
     <Screen>
-      <Icon name="email" size={100} backgroundColor="red" iconColor="white" />
+      <ListItem
+        title="My title"
+        subTitle="my subtitile"
+        ImageComponent={<Icon name="email" />}
+      />
     </Screen>
   );
 }
