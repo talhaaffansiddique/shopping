@@ -12,25 +12,12 @@ import MessageScreen from "./screens/MessageScreen";
 import ListItem from "./app/components/ListItem";
 import AccountScreen from "./screens/AccountScreen";
 import ListingScreen from "./screens/ListingScreen";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
-  const [firstName, setFirstName] = useState("");
-
   return (
     <Screen>
-      <Text> {firstName} </Text>
-      <TextInput
-        keyboardType="numeric"
-        secureTextEntry
-        // clearButtonMode="always"   on ios
-
-        onChangeText={(text) => setFirstName(text)}
-        placeholder="First name"
-        style={{
-          borderBottomColor: "#ccc",
-          borderBottomWidth: 1,
-        }}
-      />
+      <AppTextInput placeholder="Username" icon="email" />
     </Screen>
   );
 }
