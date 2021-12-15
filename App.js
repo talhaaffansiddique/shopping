@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TextInput, Text } from "react-native";
+import { Switch, View, StyleSheet, TextInput, Text } from "react-native";
 import Screen from "./app/components/Screen";
 import Icon from "./app/components/Icon";
 
@@ -15,9 +15,11 @@ import ListingScreen from "./screens/ListingScreen";
 import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
+  const [isNew, setIsNew] = useState(false);
+
   return (
     <Screen>
-      <AppTextInput placeholder="Username" icon="email" />
+      <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} />
     </Screen>
   );
 }
