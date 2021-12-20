@@ -13,13 +13,13 @@ import ListItem from "./app/components/ListItem";
 import AccountScreen from "./screens/AccountScreen";
 import ListingScreen from "./screens/ListingScreen";
 import AppTextInput from "./app/components/AppTextInput";
-import AppPicker from "./app/components/AppPicker";
 
 export default function App() {
+  const [isNew, setIsNew] = useState(false);
+
   return (
     <Screen>
-      <AppPicker icon="apps" placeholder="Category" />
-      <AppTextInput icon="email" placeholder="email" />
+      <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} />
     </Screen>
   );
 }
