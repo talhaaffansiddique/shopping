@@ -1,25 +1,29 @@
-import React, { useState } from "react";
-import { Switch, View, StyleSheet, TextInput, Text } from "react-native";
-import Screen from "./app/components/Screen";
-import Icon from "./app/components/Icon";
+import React, { useState } from "react"
 
-import AppButton from "./app/components/AppButton";
-import WelcomeScreen from "./screens/WelcomeScreen";
-import Card from "./app/components/Card";
-import ListingDetailsScreen from "./screens/ListingDetailsScreen";
-import ViewImageScreen from "./screens/ViewImageScreen";
-import MessageScreen from "./screens/MessageScreen";
-import ListItem from "./app/components/ListItem";
-import AccountScreen from "./screens/AccountScreen";
-import ListingScreen from "./screens/ListingScreen";
-import AppTextInput from "./app/components/AppTextInput";
+import Wrapper from "./app/components/Wrapper"
+import AppPicker from "./app/components/AppPicker"
+import AppTextInput from "./app/components/AppTextInput"
+
+const categories = [
+    { label: "Furniture", value: 1 },
+    { label: "Clothing", value: 2 },
+    { label: "Cameras", value: 3 },
+]
 
 export default function App() {
-  const [isNew, setIsNew] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(categories[0])
+    console.log({ selectedItem })
 
-  return (
-    <Screen>
-      <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} />
-    </Screen>
-  );
+    return (
+        <Wrapper style={{ paddingTop: 100 }}>
+            <AppPicker
+                data={categories}
+                icon="apps"
+                placeholder="Category"
+                selectedItem={selectedItem}
+                onItemSelect={setSelectedItem}
+            />
+            <AppTextInput placeholder="Email" icon="email" />
+        </Wrapper>
+    )
 }
